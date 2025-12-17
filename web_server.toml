@@ -1,0 +1,17 @@
+server_host = "localhost"
+server_port = 8080
+ssl_enabled = true
+[server]
+  host = "localhost"
+  port = 8080
+  timeout = 30.5
+  workers = 4
+  [server.logging]
+    level = "info"
+    path = "/var/log/server.log"
+    rotate = true
+  [server.ssl]
+    cert_path = "/etc/ssl/cert.pem"
+    enabled = true
+    key_path = "/etc/ssl/key.pem"
+    protocols = ["TLSv1.2", "TLSv1.3"]
